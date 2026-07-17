@@ -1,31 +1,35 @@
 # Employee Attrition Prediction using Logistic Regression
 
-An end-to-end machine learning project focused on predicting employee attrition using Logistic Regression. This project explores the complete workflow of a binary classification problem, including data cleaning, exploratory data analysis (EDA), preprocessing, model training, and evaluation.
+An end-to-end machine learning project that explores employee attrition using Logistic Regression. This project follows the complete workflow of a binary classification problem, including data cleaning, exploratory data analysis (EDA), preprocessing, model training, and evaluation.
 
 ## Project Overview
 
-Employee attrition is an important challenge for organizations, as losing experienced employees can lead to increased hiring costs, reduced productivity, and knowledge loss. In this project, I analyze employee data to identify factors associated with attrition and build a Logistic Regression model that predicts whether an employee is likely to leave the company.
+Employee attrition is an important challenge for organizations, as losing experienced employees can increase recruitment costs, reduce productivity, and lead to the loss of valuable experience. In this project, I analyze employee data to explore factors related to employee attrition and build a baseline Logistic Regression model to predict whether an employee is likely to leave the company.
 
-The primary goal of this project is to strengthen my understanding of classification algorithms and apply the concepts learned in the Machine Learning Specialization to a real-world HR analytics problem.
+The primary goal of this project is to strengthen my understanding of supervised machine learning, classification workflows, and model evaluation by applying concepts learned through the Machine Learning Specialization to a real-world HR analytics dataset.
 
 ## Workflow
 
-The project follows the following machine learning pipeline:
+The project follows the standard machine learning pipeline:
 
 * Data cleaning and preprocessing
 * Exploratory Data Analysis (EDA)
-* Feature selection
 * Train-test split
-* One-hot encoding of categorical features
+* One-Hot Encoding of categorical features
 * Standardization of numerical features
 * Logistic Regression model training
 * Model evaluation using:
 
   * Accuracy
-  * Precision
-  * Recall
-  * F1-score
   * Confusion Matrix
+
+## Results
+
+The baseline Logistic Regression model achieved approximately **50% accuracy** after addressing class imbalance using `class_weight="balanced"`.
+
+The exploratory analysis showed that several features (such as monthly income, years at the company, and overtime) exhibited very little difference between employees who stayed and those who left. As a result, the model struggled to clearly separate the two classes.
+
+Although the predictive performance is limited, this project demonstrates the complete workflow of a binary classification problem and highlights the importance of exploratory data analysis, feature quality, and model selection in machine learning.
 
 ## Tech Stack
 
@@ -47,26 +51,22 @@ employee-attrition-prediction/
 └── .gitignore
 ```
 
-## Current Status
-
-This project is currently in progress. The repository will be updated as each stage of the workflow is completed, including data exploration, model development, evaluation, and documentation.
-
 ## Future Improvements
 
-* Compare Logistic Regression with more advanced classification models.
-* Improve feature engineering and preprocessing.
-* Perform hyperparameter tuning.
+* Compare Logistic Regression with Decision Trees and Random Forests.
+* Perform feature engineering and feature selection.
+* Tune model hyperparameters.
+* Evaluate additional classification metrics such as Precision, Recall, F1-score, and ROC-AUC.
 * Deploy the best-performing model using Streamlit.
-* Add model interpretation and feature importance analysis.
 
 ## What I Learned
 
-Through this project, I aim to gain practical experience with:
+Through this project, I gained hands-on experience with:
 
-* Data preprocessing for classification problems
-* Exploratory data analysis
-* Working with categorical and numerical features
-* Building binary classification models using Logistic Regression
-* Evaluating classification models using multiple performance metrics
-* Structuring an end-to-end machine learning project
-
+* Cleaning and preparing real-world datasets
+* Exploratory data analysis for classification problems
+* Preprocessing mixed numerical and categorical features
+* Building a Logistic Regression classifier using Scikit-learn
+* Applying One-Hot Encoding and feature scaling with `ColumnTransformer`
+* Evaluating classification models using accuracy and confusion matrices
+* Understanding how feature quality and class imbalance affect model performance
